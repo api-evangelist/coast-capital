@@ -1,0 +1,53 @@
+aid: coast-capital
+url: https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/apis.yml
+name: Coast Capital Savings
+kind: company
+description: >-
+  Coast Capital Savings is a member-owned financial co-operative headquartered
+  in Surrey, British Columbia, serving over 600,000 members across roughly 45
+  branches. On November 1, 2018 it became Canada's first British Columbia-based
+  federal credit union (regulated federally rather than provincially), and in
+  May 2026 it completed a merger with Prospera Credit Union. With approximately
+  $21.9 billion CAD in total assets it is one of Canada's largest credit unions.
+  As a cooperative credit union rather than a Schedule I/II bank, Coast Capital
+  operates within Canada's voluntary and still-fragmented open-finance landscape:
+  the federal Consumer-Driven Banking (open banking) framework legislated under
+  Budget 2024 and the Fall Economic Statement 2024, with the Financial Consumer
+  Agency of Canada (FCAC) as overseer, is not yet operational. Coast Capital
+  publishes NO public first-party developer portal or documented API; consumer
+  financial-data access today is aggregator-mediated (e.g. Plaid) via
+  screen-scraping/credential-based connections rather than a first-party API.
+accessModel:
+  pricing: none
+  onboarding: none
+  trial: false
+  try_now: false
+  public: false
+  label: No public API · Aggregator-mediated data access only
+  confidence: high
+  source:
+  - website
+  - research
+  generated: '2026-07-23'
+  method: manual
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Canada
+- Credit Union
+- Cooperative
+- Consumer-Driven Banking
+- Data Aggregation
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.coastcapitalsavings.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/coast-capital-savings
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,81 @@
+aid: coast-capital
+name: Coast Capital Savings
+review:
+  question: Does Coast Capital Savings expose a public first-party developer API or portal?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Coast Capital Savings publishes no public first-party developer portal and
+    no documented public API. It is a member-owned cooperative credit union
+    (Canada's first BC-based federal credit union, converted 2018-11-01) with
+    ~600,000 members and ~$21.9B CAD in assets, headquartered in Surrey, BC;
+    it merged with Prospera Credit Union in May 2026. Probing common developer
+    hosts (developer/developers/api.coastcapitalsavings.com) returned no live
+    endpoint. No OpenAPI/Swagger is downloadable, and no API reference exists.
+    Consumer financial-data access is aggregator-mediated (e.g. Plaid) through
+    credential-based/screen-scraping connections rather than a first-party API.
+    This is the honest, common posture for a Canadian credit union: Canada's
+    Consumer-Driven Banking framework (Budget 2024 + Fall Economic Statement
+    2024, FCAC as overseer) is legislated but not yet operational, so access is
+    voluntary and fragmented.
+  charter: Federal credit union (cooperative); member-owned financial co-operative
+  developerPortal:
+    found: false
+    probed:
+      - url: https://developer.coastcapitalsavings.com
+        status: 000
+        note: No live host (connection/DNS failure).
+      - url: https://developers.coastcapitalsavings.com
+        status: 000
+        note: No live host (connection/DNS failure).
+      - url: https://api.coastcapitalsavings.com
+        status: 000
+        note: No live host (connection/DNS failure).
+      - url: https://www.coastcapitalsavings.com
+        status: 200
+        note: Public marketing/banking website; no developer or API section.
+  openApiHarvested: false
+  specProvenance: none
+  authModel: none-documented
+  fdxParticipant: false
+  consumerDrivenBanking:
+    firstPartyApi: false
+    note: >-
+      No published first-party CDB/FDX data-access API. Canada's federal
+      Consumer-Driven Banking framework is legislated but not yet live; posture
+      today is voluntary/fragmented.
+  aggregatorAccess:
+    available: true
+    providers:
+      - Plaid
+    method: Credential-based / screen-scraping via third-party aggregator; not a first-party API.
+  rails:
+    note: >-
+      As a Canadian FI, participates in shared payment infrastructure (Interac
+      e-Transfer, Payments Canada) but exposes no public API around it.
+  transports:
+    - protocol: REST
+      documented: false
+      note: No public REST API is documented.
+    - protocol: GraphQL
+      documented: false
+    - protocol: WebSocket
+      documented: false
+sources:
+  - url: https://www.coastcapitalsavings.com/
+    type: Website
+    note: Confirmed live (HTTP 200); marketing/banking site with no developer/API area.
+  - url: https://en.wikipedia.org/wiki/Coast_Capital_Savings
+    type: Reference
+    note: Charter type, membership, assets, federal-credit-union conversion, 2026 Prospera merger.
+  - url: https://plaid.com/blog/canadian-coverage-and-country-filter/
+    type: Reference
+    note: Aggregator (Plaid) coverage of Canadian credit unions incl. Coast Capital; aggregator-mediated access.
+actions:
+  status: built-stub
+  reason: >-
+    Identity-only record. No public first-party API surface exists to harvest;
+    consumer data access is aggregator-only. No fabricated hosts, specs, or
+    endpoints were created.
