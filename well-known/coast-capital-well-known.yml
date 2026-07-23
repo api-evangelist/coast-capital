@@ -1,0 +1,30 @@
+generated: '2026-07-23'
+method: searched
+source: live probes of https://www.coastcapitalsavings.com/.well-known/*
+host: https://www.coastcapitalsavings.com
+note: >-
+  The only live machine-readable well-known surface is the member-authentication
+  OIDC discovery document (backed by the site's Umbraco member-auth delivery API
+  at /umbraco/delivery/api/v1/security/member/*). It is an identity-provider
+  surface for member sign-in, not a public banking/data API. The Umbraco Content
+  Delivery API and its swagger.json redirect to /not-found (publicly disabled),
+  so no public OpenAPI is harvestable.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: coast-capital-openid-configuration.json
+  note: OIDC discovery document (member authentication).
+- path: /.well-known/jwks
+  status: 200
+  file: coast-capital-jwks.json
+  note: JSON Web Key Set (RS256 signing key) referenced by the OIDC config.
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/oauth-protected-resource
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

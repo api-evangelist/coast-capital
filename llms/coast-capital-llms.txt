@@ -1,0 +1,28 @@
+# Coast Capital Savings
+
+> Coast Capital Savings is a member-owned financial co-operative headquartered in Surrey, British Columbia, serving over 600,000 members across roughly 45 branches. On November 1, 2018 it became Canada's first British Columbia-based federal credit union, and in May 2026 it completed a merger with Prospera Credit Union. With approximately $21.9 billion CAD in total assets it is one of Canada's largest credit unions. Coast Capital publishes NO public first-party developer portal or documented API; consumer financial-data access today is aggregator-mediated (e.g. Plaid) rather than through a first-party API.
+
+## Overview
+- Type: Federal credit union (cooperative), member-owned
+- Public first-party API: none published
+- Consumer data access: aggregator-mediated (Plaid), credential-based / screen-scraping
+- Regulatory context: Canada's federal Consumer-Driven Banking (open banking) framework is legislated (Budget 2024 + Fall Economic Statement 2024, FCAC overseer) but not yet operational
+
+## Machine-readable surfaces
+- [OIDC discovery (member auth)](https://www.coastcapitalsavings.com/.well-known/openid-configuration): Member-authentication OpenID Connect discovery document (Umbraco member-auth delivery API). Identity provider for member sign-in, not a data API.
+- [JWKS](https://www.coastcapitalsavings.com/.well-known/jwks): RS256 JSON Web Key Set referenced by the OIDC config.
+
+Note: The Umbraco Content Delivery API and its swagger.json redirect to /not-found (publicly disabled); no public OpenAPI is available.
+
+## Web
+- [Website](https://www.coastcapitalsavings.com/)
+- [Privacy](https://www.coastcapitalsavings.com/privacy)
+- [Legal](https://www.coastcapitalsavings.com/legal)
+- [LinkedIn](https://www.linkedin.com/company/coast-capital-savings)
+
+## Artifacts (API Evangelist)
+- [Authentication profile](authentication/coast-capital-authentication.yml)
+- [OAuth scopes](scopes/coast-capital-scopes.yml)
+- [Well-known index](well-known/coast-capital-well-known.yml)
+- [Conformance](conformance/coast-capital-conformance.yml)
+- [Domain security](security/coast-capital-domain-security.yml)

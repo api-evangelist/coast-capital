@@ -1,0 +1,34 @@
+generated: '2026-07-23'
+method: searched
+source: https://www.coastcapitalsavings.com/.well-known/openid-configuration
+note: >-
+  Standards conformance asserted from the live member-authentication OIDC
+  discovery document only. Coast Capital publishes no public data API, so no
+  banking-domain standards (FDX, PSD2, FAPI, CDR) apply — Canada's federal
+  Consumer-Driven Banking framework is legislated but not yet operational.
+standards:
+- id: oidc-discovery
+  conforms: true
+  evidence: /.well-known/openid-configuration returns a valid OIDC discovery document (issuer, authorization/token/userinfo/jwks endpoints).
+- id: oauth2
+  conforms: true
+  evidence: authorization_code, refresh_token and client_credentials grant types with token/authorization endpoints.
+- id: oidc
+  conforms: true
+  evidence: openid scope supported, id_token RS256 signing, userinfo_endpoint present.
+- id: pkce-rfc7636
+  conforms: true
+  evidence: code_challenge_methods_supported includes S256.
+- id: jwks-rfc7517
+  conforms: true
+  evidence: /.well-known/jwks returns an RS256 JSON Web Key Set referenced by jwks_uri.
+- id: rfc8414-oauth-authorization-server
+  conforms: false
+  evidence: /.well-known/oauth-authorization-server returns 404; discovery is served via the OIDC metadata endpoint only.
+- id: rfc9457-problem-details
+  conforms: false
+- id: fdx
+  conforms: false
+  evidence: No public first-party financial-data-exchange API is published.
+- id: fapi
+  conforms: false

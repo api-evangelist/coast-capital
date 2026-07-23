@@ -44,8 +44,22 @@ modified: '2026-07-23'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/coast-capital-domain-security.yml
+- type: WellKnown
+  url: well-known/coast-capital-well-known.yml
+- type: Authentication
+  url: authentication/coast-capital-authentication.yml
+- type: OAuthScopes
+  url: scopes/coast-capital-scopes.yml
+- type: Conformance
+  url: conformance/coast-capital-conformance.yml
+- type: LLMsTxt
+  url: llms/coast-capital-llms.txt
 - type: Website
   url: https://www.coastcapitalsavings.com/
+- type: PrivacyPolicy
+  url: https://www.coastcapitalsavings.com/privacy
 - type: LinkedIn
   url: https://www.linkedin.com/company/coast-capital-savings
 maintainers:

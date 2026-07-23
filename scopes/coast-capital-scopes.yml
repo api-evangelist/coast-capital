@@ -1,0 +1,24 @@
+generated: '2026-07-23'
+method: searched
+source: https://www.coastcapitalsavings.com/.well-known/openid-configuration
+note: >-
+  Scopes advertised by the member-authentication OIDC discovery document
+  (scopes_supported). These govern member sign-in / identity, not a public
+  data API. No scope reference page is published in developer docs (there is
+  no public developer portal).
+schemes:
+- name: memberOIDC
+  source: well-known/coast-capital-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://www.coastcapitalsavings.com/umbraco/delivery/api/v1/security/member/authorize
+    tokenUrl: https://www.coastcapitalsavings.com/umbraco/delivery/api/v1/security/member/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; returns an ID token for the signed-in member.
+  flows: [authorizationCode]
+  sources: [well-known/coast-capital-openid-configuration.json]
+- scope: offline_access
+  description: Issues a refresh token so the member session can be renewed without re-authentication.
+  flows: [authorizationCode]
+  sources: [well-known/coast-capital-openid-configuration.json]
