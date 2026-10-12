@@ -1,0 +1,18 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/coast-capital/integrations
+- https://zapier.com/apps/coast-capital-savings/integrations
+- https://n8n.io/integrations/coast-capital/
+- https://composio.dev/toolkits/coast-capital
+- https://monid.ai/tools/coast-capital
+checked:
+- https://composio.dev/toolkits/coast-capital
+- https://monid.ai/tools/coast-capital
+- https://n8n.io/integrations/coast-capital/
+- https://zapier.com/apps/coast-capital-savings/integrations
+- https://zapier.com/apps/coast-capital/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
