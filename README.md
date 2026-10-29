@@ -1,4 +1,4 @@
-# Coast Capital Savings (coast-capital)
+# Coast Capital Savings
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,44 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Coast Capital Savings is a member-owned financial co-operative headquartered in Surrey, British Columbia, serving over 600,000 members across roughly 45 branches with approximately $21.9 billion CAD in total assets. On November 1, 2018 it became Canada's first British Columbia-based federal credit union (federally regulated), and in May 2026 it completed a merger with Prospera Credit Union — making it one of Canada's largest credit unions.
+Coast Capital Savings is a member-owned financial co-operative headquartered in Surrey, British Columbia, serving over 600,000 members across roughly 45 branches. On November 1, 2018 it became Canada's first British Columbia-based federal credit union (regulated federally rather than provincially), and in May 2026 it completed a merger with Prospera Credit Union. With approximately $21.9 billion CAD in total assets it is one of Canada's largest credit unions. As a cooperative credit union rather than a Schedule I/II bank, Coast Capital operates within Canada's voluntary and still-fragmented open-finance landscape: the federal Consumer-Driven Banking (open banking) framework legislated under Budget 2024 and the Fall Economic Statement 2024, with the Financial Consumer Agency of Canada (FCAC) as overseer, is not yet operational. Coast Capital publishes NO public first-party developer portal or documented API; consumer financial-data access today is aggregator-mediated (e.g. Plaid) via screen-scraping/credential-based connections rather than a first-party API.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/coast-capital/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Canada · Credit Union · Cooperative · Consumer-Driven Banking
 
-## Open-Finance Posture
+## Coast Capital Savings on APIs.io
 
-As a cooperative credit union (not a Schedule I/II chartered bank), Coast Capital operates within Canada's voluntary and still-fragmented open-finance landscape. Canada has **no operational open-banking mandate**: the federal Consumer-Driven Banking framework legislated under Budget 2024 and the Fall Economic Statement 2024 — with the Financial Consumer Agency of Canada (FCAC) as overseer — is legislated but not yet live.
+Everything profiled for Coast Capital Savings is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/coast-capital/](https://apis.io/providers/coast-capital/)** — or go straight to one of the APIs or properties below.
 
-- **First-party developer portal:** None found. Probing `developer.coastcapitalsavings.com`, `developers.coastcapitalsavings.com`, and `api.coastcapitalsavings.com` returned no live host (DNS/connection failure). No public OpenAPI/Swagger is published.
-- **Consumer data access:** Aggregator-mediated only. Coast Capital accounts are reachable through third-party aggregators such as Plaid via credential-based/screen-scraping connections, not a documented first-party API.
-- **Consumer-Driven Banking (CDB):** No published first-party CDB/FDX API. The Canadian framework is not yet operational.
-- **Rails:** As a Canadian financial institution it participates in shared payment infrastructure (Interac e-Transfer, Payments Canada), but exposes no public API around it.
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-None. Coast Capital Savings does not publish a public first-party developer API. This is an identity-only (built-stub) record; consumer financial-data access is aggregator-mediated (e.g. Plaid).
+#### Security (2)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Financial Services
-- Banking
-- Canada
-- Credit Union
-- Cooperative
-- Consumer-Driven Banking
-- Data Aggregation
+- [Coast Capital Authentication](https://apis.io/security/coast-capital/coast-capital-authentication/)
+- [Coast Capital Domain Security](https://apis.io/security/coast-capital/coast-capital-domain-security/)
 
-## Timestamps
+#### OAuth scopes (1)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+The permissions the API asks for.
 
-## Common Properties
+- [Coast Capital Scopes](https://apis.io/scopes/coast-capital/coast-capital-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.coastcapitalsavings.com/)
-- [LinkedIn](https://www.linkedin.com/company/coast-capital-savings)
+- [Privacy policy](https://www.coastcapitalsavings.com/privacy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 13.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 10.5 |
+
+**Agent readiness 10.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.9** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/coast-capital/](https://apis.io/providers/coast-capital/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Coast Capital Savings: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/coast-capital/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
